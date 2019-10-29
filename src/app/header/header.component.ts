@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +10,8 @@ export class HeaderComponent implements OnInit {
   keyword = 'test';
   isHighlight = false;
   fontSize = 24;
+
+  @Output() searchKeyword = new EventEmitter();
 
   constructor() {}
 
@@ -25,5 +27,6 @@ export class HeaderComponent implements OnInit {
     this.isHighlight = !this.isHighlight;
     this.fontSize += 2;
 
+    this.searchKeyword.emit(this.keyword);
   }
 }
