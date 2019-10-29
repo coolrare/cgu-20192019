@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
   count = 1;
   keyword = 'test';
   isHighlight = false;
+  fontSize = 24;
 
   constructor() {}
 
@@ -22,5 +23,7 @@ export class HeaderComponent implements OnInit {
     console.log(event);
 
     this.isHighlight = !this.isHighlight;
+    this.fontSize += 2;
+
   }
 }
