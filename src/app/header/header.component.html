@@ -1,8 +1,6 @@
 <nav class="navbar navbar-light">
   <div class="container">
-    <a class="navbar-brand"
-      href="index.html"
-      [class.highlight]="isHighlight"
+    <a class="navbar-brand" href="index.html" [class.highlight]="isHighlight"
       [style.font-size.px]="fontSize">conduit</a>
     <!-- <a class="navbar-brand"
       href="index.html"
@@ -18,5 +16,10 @@
       <i class="ion-search"></i>
     </button>
   </div>
-  {{ keyword }}
+  <span class="highlight">
+    <ng-container *ngIf="!keyword; else displayKeyword">請輸入關鍵字</ng-container>
+    <ng-template #displayKeyword>
+      {{ keyword }}
+    </ng-template>
+  </span>
 </nav>
