@@ -1,27 +1,63 @@
-# Cgu20191029
+## 熱鍵表
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
+- 下載 PDF 檔
+    - [Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+    - [Mac](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
+    - [Linux](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)
 
-## Development server
+- 全部儲存：
+    - [Win] ctrl + k, s
+    - [Mac] cmd + option + s
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- 切換元件關聯檔案：
+    - [Win] alt + u / i / o / p
+    - [Mac] option + shift + o / i / o / p
+    - u: .ts
+    - i: .css / scss
+    - o: .html
+    - p: .spec.ts
 
-## Code scaffolding
+- 快速開啟檔案
+    - [Win] ctrl + p
+    - [Mac] cmd + p
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- 開啟/關閉左邊的 siderbar
+    - [Win] ctrl + b
+    - [Mac] cmd + b
 
-## Build
+- 開啟/關閉檔案總管
+    - [Win] ctrl + shift + e
+    - [Mac] cmd + shift + e
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- 開啟/關閉搜尋視窗
+    - [Win] ctrl + shift + f
+    - [Mac] cmd + shift + f
 
-## Running unit tests
+- 開啟/關閉原始檔控制(git)
+    - [Win/Mac] ctrl + shift + g
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- 自動排版
+    - [Win/Mac] alt + shift + f (記得設定 prettier.singleQuote)
 
-## Running end-to-end tests
+- 註解
+    - [Win] ctrl + k + c
+    - [Mac] cmd + k + c
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- 取消註解
+    - [Win] ctrl + k + u
+    - [Mac] cmd + k + u
 
-## Further help
+- 單行註解
+    - [Win] ctrl + /
+    - [Mac] cmd + /
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- 將目前的檔案用一個新視窗開啟
+    - [Win] ctrl + k, o
+    - [Mac] cmd + k, o
+    
+- 回到游標上一次的位置
+    - alt + 方向鍵左鍵
+
+## Emmet
+
+https://docs.emmet.io/abbreviations/syntax/
