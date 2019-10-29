@@ -13,11 +13,10 @@ export class HeaderComponent implements OnInit {
 
   @Output() searchKeyword = new EventEmitter();
 
-  constructor() {}
-
-  ngOnInit() {}
-
   search(event: MouseEvent) {
+
+    this.searchKeyword.emit(this.keyword);
+
     if (event.altKey) {
       this.count += 1;
     }
@@ -26,7 +25,9 @@ export class HeaderComponent implements OnInit {
 
     this.isHighlight = !this.isHighlight;
     this.fontSize += 2;
-
-    this.searchKeyword.emit(this.keyword);
   }
+
+  constructor() {}
+
+  ngOnInit() {}
 }

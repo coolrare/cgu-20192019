@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ArticlesService } from './articles.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'conduit';
   subtitle = 'A place to share your <u>knowledge</u>.';
 
@@ -73,10 +74,22 @@ export class AppComponent {
 
   originalList = this.data;
 
+  constructor(private articleService: ArticlesService) {
+
+  }
+
+  ngOnInit() {
+    this.articleService.getArticles().subscribe((data: any) => {
+      console.log(data);
+      this.data = data.articles;
+    });
+  }
+
   doSearch(keyword: string) {
     // console.log(keyword);
     if (keyword) {
-      this.data = this.originalList.filter(item => item.title.indexOf(keyword));
+      console.log(keyword);
+      this.data = this.originalList.filter(item => item.title.indexOf(keyword) !== -1);
     }
   }
 }
